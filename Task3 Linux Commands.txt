@@ -1,0 +1,95 @@
+Linux commands
+
+cd - change directory
+cd .. - parent , one folder up
+cd ../.. - parent , two folder up
+pwd - present working directory
+ls - list the files 
+ls -l - long list all the files
+ls -a - list the hidden files
+cat > file1 - create and write in file
+cat file1 - view the file
+tac file1 - view file in reverse 
+less file1 - list less in long file
+head file1 - list head in long file
+tail file1 - list the bottom in long file
+cat file1 file2 > file3 - concardinate two empty files
+touch file11 - create empty file
+cat >> file11 - write in an empty file
+touch file1 file2 file3 - create multiple empty files given
+touch file{1:10} - create files from 1 to 10
+vi file1 - file editor
+i - insert
+esc :wq - exit and save file
+esc :q - exit and without saving
+cp source destination -copy
+mv source destination - move/rename
+touch .newfile.txt - create hidden file
+rm -rf filename -remove file without confirmation
+rm -rf dir1 - removes directory without confirmation
+rm filename -remove file with confirmation
+rmdir dir1 - remove directory if empty
+rmdir -pv dir1 - force delete
+rmdir -p dir1/subdir1 -deletes parent /sub directory 
+ls | head - 
+ls | head -5 - shows first 5 
+ls -a | head -5 - shows first 5(inclusive of hidden )
+history - shows all the previous command typed
+
+cat > file1 - create a file 
+grep "h" file1 - type the alphabet which needs to be identified 
+grep -h "h" file1 - highlight the alphabet in ""
+grep -c "h" file1 - in how many lines the highlighted alphaet are shown
+grep -n "h" file1 - attaches line number only for the highlighted
+grep -i "h" file1 - case insensitive (shows both h & H)
+grep -o "h" file1 - shows all the "h" in highlighted
+grep -v "h" file1 - it shows the letters/sentence not having "h"
+grep -e "h" -e "o" file1 - multiple search pattern
+
+find (path) (option) (expresion)
+.  current directory
+/  root directory
+-typed (looking for directory ) *not working
+-typef (looking for file alone) *not working
+find -name "new" (or) find . -name "new" (or) find / -name "new" (looking for name)
+find -iname "New" (or) find . -name "new" (or) find / -name "new" (looking for name case insensitive)
+sudo su (to change to super user)
+useradd joe (to create user)
+useradd jp (to create user)
+useradd harish (to create user)
+useradd ram (to create user)
+cat /etc/passwd (to view/find the users)
+passwd joe (to create pasword for users)
+groupadd daniboys
+cat /etc/group (to view/find the group & users) 
+gpasswd -a joe daniboys (to add single user to group)
+gpasswd -M jp,ram,harish daniboys (to add multiple user to group)
+userdel joe (to delete user)
+groupdel daniboys (to delete group)
+delete user from group
+create user from already existing group
+man ls (help command after man type the command)
+ls --help (help command)
+touch newfile
+ls -l
+*dr--r--r- 1 root root 6 26nov22 10:42 new file
+chmod 754 newfile ( U G O )(change file permission read 4 write 2 execute 1 block permission 0)
+chown sam newfile (Change file creation owner/user)
+chgrp boss newfile (Change file owner/group)
+after above 3 command
+*drwxrw-r- 1 sam boss 6 26nov22 10:42 new file
+*compress - reduce size
+gzip newfile (to compress/zip a file)
+gunzip newfile (to unzip a file)
+*archive - muliple files to one file
+tar cf newfile.tar newfile (to archive, when archived permission are restricted)
+tar cvf newfile.tar newfile (to view what is archived)
+*archive & compression
+tar -zcvf newfile.tar.g3 newfile (create archive&compression)
+tar -zcvf newfile.tg3 newfile (create archive&compression)
+tar -zxcf newfile.tar.g3 newfile (Extract archive&compression)
+*links not yet delivered drwxrw-r- 1 ?(1 is link)
+
+vi newfile (edit a file)
+bg (to send the current file to run in background)
+top (displays status of current running process)
